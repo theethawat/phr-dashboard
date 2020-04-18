@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import "bulma/css/bulma.min.css"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import Hypertension from "./disease/Hypertension"
+import Firebase from "./Firebase"
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -44,26 +47,42 @@ class App extends Component {
                   แดชบอร์ด
                 </Link>
 
-                <Link className="navbar-item">วิเคราะห์</Link>
+                <Link className="navbar-item">แก้เกณฑ์การวิเคราะห์</Link>
 
                 <div className="navbar-item has-dropdown is-hoverable">
-                  <Link className="navbar-link">แก้ไขข้อมูลในระบบ</Link>
+                  <Link className="navbar-link">คำแนะนำสัญญาณชีพ</Link>
 
                   <div className="navbar-dropdown">
-                    <Link to="/vitalsign" className="navbar-item">
-                      คำแนะนำสัญญาณชีพ
+                    <Link to="/spo2" className="navbar-item">
+                      ออกซิเจนในเลือด
                     </Link>
-                    <Link to="/disease" className="navbar-item">
-                      คำแนะนำต่อโรค
+                    <Link to="/glucose" className="navbar-item">
+                      ระดับน้ำตาลในเลือด
                     </Link>
-                    <Link to="/range" className="navbar-item">
-                      เกณฑ์การแบ่งความเสี่ยง
+                    <Link to="/blood-pressure" className="navbar-item">
+                      ความดันโลหิต
+                    </Link>
+                    <Link to="/heartrate" className="navbar-item">
+                      อัตราการเต้นของหัวใจ
                     </Link>
                     <hr className="navbar-divider" />
-                    <Link className="navbar-item">Report an issue</Link>
+                    <Link to="/weight" className="navbar-item">
+                      ภาวะน้ำหนักตัว
+                    </Link>
                   </div>
                 </div>
+                <div className="navbar-item has-dropdown is-hoverable">
+                  <Link className="navbar-link">คำแนะนำโรค</Link>
 
+                  <div className="navbar-dropdown">
+                    <Link to="/hypertension" className="navbar-item">
+                      โรคความดันโลหิตสูง
+                    </Link>
+                    <Link to="/diabetes" className="navbar-item">
+                      โรคเบาหวาน
+                    </Link>
+                  </div>
+                </div>
                 <Link to="/" className="navbar-item">
                   จำลองข้อมูล
                 </Link>
@@ -83,6 +102,9 @@ class App extends Component {
           </nav>
 
           <Switch>
+            <Route path="/hypertension">
+              <Hypertension />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
@@ -95,4 +117,5 @@ class App extends Component {
 function Home() {
   return <h2>Home</h2>
 }
+
 export default App
