@@ -4,6 +4,8 @@ import "./App.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Hypertension from "./disease/Hypertension"
 import Firebase from "./Firebase"
+import Weight from "./vitalsign/Weight"
+import Diabetes from "./disease/Diabetes"
 
 class App extends Component {
     constructor(props: any) {
@@ -104,6 +106,12 @@ class App extends Component {
                     <Switch>
                         <Route path="/hypertension">
                             <Hypertension />
+                        </Route>
+                        <Route path="/diabetes">
+                            <Diabetes />
+                        </Route>
+                        <Route path="/weight">
+                            <Weight />
                         </Route>
                         <Route path="/">
                             <Home />
