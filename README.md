@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-Health for Personal Sensor Application | Database Management
 
-## Available Scripts
+![TypeScript](https://img.shields.io/npm/types/typescript?style=flat-square)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+<a href="https://bulma.io">
+<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
 
-In the project directory, you can run:
+</a>
 
-### `npm start`
+based on E-Health for Personal Sensor Application (2019) - version 3.0.1
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Web Application to access Google Cloud Firestore Database to manage health data in database. React, Firebase and TypeScript are methods to build. Just Only this section can be public.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Repository
 
-### `npm test`
+Centre For Network Research (CNR) - Prince of Songkla University Improvement Personal Health Connected Application (2017) to become the Analysis Application.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project has forked From
 
-### `npm run build`
+## Core Application (All Are in Private Repository)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Version 1.0 - 2.0
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Developer: Wasin Passornpakorn, Warakorn Sithirith
+- Implement Bluetooth Stack application especially Nonin Onyx II Custom socket profile
+- rxJava,rxAndroid,Dagger2, Expresso, assertJ, Mockito,Stetho, Leakcanary, Timber, RoomDB and Android Activity Life Cycle
+- Implement Firebase Offline Support and Firebase Cloud Firestore Management
+- Reactive Programing (Asynchronous Programing) Using RxJava 2
+- Grouping using Dagger2
+- Telecomination Docter Services
+- Graph and History show
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Version 3.0.1 (2019 - present) Underdevelopment
 
-### `npm run eject`
+- Developer: Theethawat Savastham
+- Fix some problem and implement somes
+- Add Data Analysis and Monitoring Model
+- Kotlin, Android Model-View-ViewModel, LiveData, DataBinding, Kotlin Coroutines, etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Advicer
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Research Manager
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Assoc.Prof. Dr. Sinchai Kamolphiwong
+- Assoc.Prof. Thossaporn Kamolphiwong
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Other Advicer
 
-## Learn More
+- Assist. Prof. Touchai Angchuan
+- Assist. Prof. Suthon Sae-Wong
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Special Thank in Development Version 3.0.1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Mr. Wasin Passornpakorn
+- Mr. Warakorn Sittirith
+- Mr. Rom Rakharb
+- CNR Friends and Staff
 
-### Code Splitting
+## Repository Note
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
