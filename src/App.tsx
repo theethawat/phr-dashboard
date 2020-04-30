@@ -6,6 +6,7 @@ import Hypertension from "./disease/Hypertension"
 import Firebase from "./Firebase"
 import Weight from "./vitalsign/Weight"
 import Diabetes from "./disease/Diabetes"
+import Vitalsign from "./vitalsign/Vitalsign"
 
 class App extends Component {
     constructor(props: any) {
@@ -112,6 +113,12 @@ class App extends Component {
                         </Route>
                         <Route path="/weight">
                             <Weight />
+                        </Route>
+                        <Route path="/spo2">
+                            <Vitalsign value="spo2" />
+                        </Route>
+                        <Route path="/blood-pressure">
+                            <Vitalsign value="blood_pressure" />
                         </Route>
                         <Route path="/">
                             <Home />
