@@ -7,6 +7,7 @@ import Firebase from "./Firebase"
 import Weight from "./vitalsign/Weight"
 import Diabetes from "./disease/Diabetes"
 import Vitalsign from "./vitalsign/Vitalsign"
+import EditRange from "./vitalsign/EditRange"
 
 class App extends Component {
     constructor(props: any) {
@@ -14,6 +15,7 @@ class App extends Component {
     }
 
     render() {
+
         return (
             <div>
                 <Router>
@@ -50,7 +52,7 @@ class App extends Component {
                                     แดชบอร์ด
                 </Link>
 
-                                <Link to="" className="navbar-item">แก้เกณฑ์การวิเคราะห์</Link>
+                                <Link to="/edit-range" className="navbar-item">แก้เกณฑ์การวิเคราะห์</Link>
 
                                 <div className="navbar-item has-dropdown is-hoverable">
                                     <Link to="" className="navbar-link">คำแนะนำสัญญาณชีพ</Link>
@@ -119,6 +121,15 @@ class App extends Component {
                         </Route>
                         <Route path="/blood-pressure">
                             <Vitalsign value="blood_pressure" />
+                        </Route>
+                        <Route path="/glucose">
+                            <Vitalsign value="glucose" />
+                        </Route>
+                        <Route path="/heartrate">
+                            <Vitalsign value="heart_rate" />
+                        </Route>
+                        <Route path="/edit-range">
+                            <EditRange />
                         </Route>
                         <Route path="/">
                             <Home />
