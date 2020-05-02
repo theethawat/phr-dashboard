@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "bulma/css/bulma.min.css"
+import phrLogo from "./text-logo-2.png"
 import "./App.css"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Hypertension from "./disease/Hypertension"
@@ -9,13 +10,31 @@ import Diabetes from "./disease/Diabetes"
 import Vitalsign from "./vitalsign/Vitalsign"
 import EditRange from "./vitalsign/EditRange"
 
-class App extends Component {
+class App extends Component<any, any> {
     constructor(props: any) {
         super(props)
+        this.state = {
+            navbarExpand: false
+        }
+        this.toggleNavbar = this.toggleNavbar.bind(this)
+    }
+
+    toggleNavbar() {
+        let navbarState = this.state.navbarExpand
+        if (navbarState == true) {
+            this.setState({
+                navbarExpand: false
+            })
+        }
+        else {
+            this.setState({
+                navbarExpand: true
+            })
+        }
     }
 
     render() {
-
+        let navBarMenuEnable = this.state.navbarExpand
         return (
             <div>
                 <Router>
@@ -25,20 +44,21 @@ class App extends Component {
                         aria-label="main navigation"
                     >
                         <div className="navbar-brand">
-                            <a className="navbar-item" href="#">
+                            <a className="navbar-item" href="/">
                                 <img
-                                    src="https://bulma.io/images/bulma-logo.png"
-                                    width="112"
+                                    src={phrLogo}
+                                    width="114"
                                     height="28"
                                 />
                             </a>
 
                             <a
                                 role="button"
-                                className="navbar-burger burger"
+                                className={navBarMenuEnable ? "navbar-burger burger is-active" : "navbar-burger burger"}
                                 aria-label="menu"
                                 aria-expanded="false"
                                 data-target="navbarBasicExample"
+                                onClick={this.toggleNavbar}
                             >
                                 <span aria-hidden="true"></span>
                                 <span aria-hidden="true"></span>
@@ -46,7 +66,7 @@ class App extends Component {
                             </a>
                         </div>
 
-                        <div id="navbarBasicExample" className="navbar-menu">
+                        <div id="navbarBasicExample" className={navBarMenuEnable ? "navbar-menu is-active" : "navbar-menu"}>
                             <div className="navbar-start kanitlight">
                                 <Link to="/" className="navbar-item">
                                     แดชบอร์ด
