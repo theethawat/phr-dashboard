@@ -3,7 +3,7 @@
 E-Health for Personal Sensor Dashboard and Database Management
 
 ![TypeScript](https://img.shields.io/npm/types/typescript?style=flat-square)
-
+[![Join the chat at https://gitter.im/cnr-phr/phr-dashboard](https://badges.gitter.im/cnr-phr/phr-dashboard.svg)](https://gitter.im/cnr-phr/phr-dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <a href="https://bulma.io">
 <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
 
@@ -17,7 +17,7 @@ Centre For Network Research (CNR) - Prince of Songkla University Improvement Per
 
 ## Developer
 
-- Theethawat Savastham [theethawat.s@outlook.co.th](mailto:theethawat.s@outlook.co.th) Chat by [Telegram](https://t.me/theethawatsa)
+- Theethawat Savastham [theethawat.s@outlook.co.th](mailto:theethawat.s@outlook.co.th) Chat by [Gitter](https://gitter.im/cnr-phr/phr-dashboard)
 
 ## Advicer and Committee
 
@@ -37,4 +37,4 @@ Centre For Network Research (CNR) - Prince of Songkla University Improvement Per
 
 [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com) [![Join the chat at https://gitter.im/cnr-phr/phr-dashboard](https://badges.gitter.im/cnr-phr/phr-dashboard.svg)](https://gitter.im/cnr-phr/phr-dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
