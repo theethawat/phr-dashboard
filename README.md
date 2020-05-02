@@ -60,4 +60,4 @@ Project has forked From
 
 [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com) [![Join the chat at https://gitter.im/cnr-phr/community](https://badges.gitter.im/cnr-phr/community.svg)](https://gitter.im/cnr-phr/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
