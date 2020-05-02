@@ -1,53 +1,30 @@
-# E-Health for Personal Sensor Application | Database Management
+# PHR-Dashboard
+
+E-Health for Personal Sensor Dashboard and Database Management
 
 ![TypeScript](https://img.shields.io/npm/types/typescript?style=flat-square)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 <a href="https://bulma.io">
 <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
 
 </a>
 
-based on E-Health for Personal Sensor Application (2019) - version 3.0.1
+Repository based on E-Health for Personal Sensor Application (2019) - version 3.1.2
 
-Web Application to access Google Cloud Firestore Database to manage health data in database. React, Firebase and TypeScript are methods to build. Just Only this section can be public.
-
-# Repository
+Web application to access **Firebase Cloud Firestore** to manage health data in database and it will be improved to dashboard for system administrator and medical personnel. **React**, **Firebase** and **TypeScript** are methods to build. Just Only this section can be public, the main source code of Android Application must be private.
 
 Centre For Network Research (CNR) - Prince of Songkla University Improvement Personal Health Connected Application (2017) to become the Analysis Application.
 
-Project has forked From
+## Developer
 
-## Core Application (All Are in Private Repository)
+- Theethawat Savastham [theethawat.s@outlook.co.th](mailto:theethawat.s@outlook.co.th) Chat by [Telegram](https://t.me/theethawatsa)
 
-### Version 1.0 - 2.0
+## Advicer and Committee
 
-- Developer: Wasin Passornpakorn, Warakorn Sithirith
-- Implement Bluetooth Stack application especially Nonin Onyx II Custom socket profile
-- rxJava,rxAndroid,Dagger2, Expresso, assertJ, Mockito,Stetho, Leakcanary, Timber, RoomDB and Android Activity Life Cycle
-- Implement Firebase Offline Support and Firebase Cloud Firestore Management
-- Reactive Programing (Asynchronous Programing) Using RxJava 2
-- Grouping using Dagger2
-- Telecomination Docter Services
-- Graph and History show
-
-### Version 3.0.1 (2019 - present) Underdevelopment
-
-- Developer: Theethawat Savastham
-- Fix some problem and implement somes
-- Add Data Analysis and Monitoring Model
-- Kotlin, Android Model-View-ViewModel, LiveData, DataBinding, Kotlin Coroutines, etc.
-
-## Advicer
-
-### Research Manager
-
-- Assoc.Prof. Dr. Sinchai Kamolphiwong
-- Assoc.Prof. Thossaporn Kamolphiwong
-
-### Other Advicer
-
-- Assist. Prof. Touchai Angchuan
-- Assist. Prof. Suthon Sae-Wong
+- Sinchai Kamolphiwong
+- Thossaporn Kamolphiwong
+- Touchai Angchuan
+- Suthon Sae-Wong
 
 ## Special Thank in Development Version 3.0.1
 
