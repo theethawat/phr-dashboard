@@ -237,6 +237,10 @@ class App extends Component<any, any> {
 
                     {displayAreaMember}
                 </Router>
+                <div >
+                    <hr />
+                    <p className="kanitlight acenter"> Made with love from Centre for Network Research  Computer Engineering,Prince of Songkla University </p> <br />
+                </div>
             </div>
         )
     }
