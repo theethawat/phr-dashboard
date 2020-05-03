@@ -9,14 +9,23 @@ import Weight from "./vitalsign/Weight"
 import Diabetes from "./disease/Diabetes"
 import Vitalsign from "./vitalsign/Vitalsign"
 import EditRange from "./vitalsign/EditRange"
+import LoginPhase from "./Authen/LoginPhase"
+let auth = Firebase.auth()
 
+/** Nav bar expand use for expand bulma navigation
+ * Handle the login of Google Login by hand display area state
+ */
 class App extends Component<any, any> {
     constructor(props: any) {
         super(props)
         this.state = {
-            navbarExpand: false
+            navbarExpand: false,
+            displayArea: null,
+            userName: ''
         }
         this.toggleNavbar = this.toggleNavbar.bind(this)
+        this.updateLoginState = this.updateLoginState.bind(this)
+        this.logoutHandle = this.logoutHandle.bind(this)
     }
 
     toggleNavbar() {
@@ -33,8 +42,109 @@ class App extends Component<any, any> {
         }
     }
 
+    updateLoginState(userName: string) {
+        let displayingArea = <Switch>
+            <Route path="/hypertension">
+                <Hypertension />
+            </Route>
+            <Route path="/diabetes">
+                <Diabetes />
+            </Route>
+            <Route path="/weight">
+                <Weight />
+            </Route>
+            <Route path="/spo2">
+                <Vitalsign value="spo2" />
+            </Route>
+            <Route path="/blood-pressure">
+                <Vitalsign value="blood_pressure" />
+            </Route>
+            <Route path="/glucose">
+                <Vitalsign value="glucose" />
+            </Route>
+            <Route path="/heartrate">
+                <Vitalsign value="heart_rate" />
+            </Route>
+            <Route path="/edit-range">
+                <EditRange />
+            </Route>
+            <Route path="/">
+                <Home />
+            </Route>
+        </Switch>
+        if (userName) {
+            this.setState({
+                displayArea: displayingArea,
+                userName: userName
+            })
+        }
+    }
+
+    logoutHandle() {
+        auth.signOut().then(() => {
+            window.alert("Sign Out Success")
+            this.setState({
+                userName: ""
+            })
+        }).catch(err => {
+            window.alert("Sign Out Fail " + err)
+        })
+    }
+
+    componentDidMount() {
+        // The Prebuilt Container UI for handling
+        let displayingArea = <Switch>
+            <Route path="/hypertension">
+                <Hypertension />
+            </Route>
+            <Route path="/diabetes">
+                <Diabetes />
+            </Route>
+            <Route path="/weight">
+                <Weight />
+            </Route>
+            <Route path="/spo2">
+                <Vitalsign value="spo2" />
+            </Route>
+            <Route path="/blood-pressure">
+                <Vitalsign value="blood_pressure" />
+            </Route>
+            <Route path="/glucose">
+                <Vitalsign value="glucose" />
+            </Route>
+            <Route path="/heartrate">
+                <Vitalsign value="heart_rate" />
+            </Route>
+            <Route path="/edit-range">
+                <EditRange />
+            </Route>
+            <Route path="/">
+                <Home />
+            </Route>
+        </Switch>
+        // Handling the Authentication State
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                console.log("welcome " + user.email)
+                this.setState({
+                    displayArea: displayingArea,
+                    userName: user.email
+                })
+            }
+            else {
+                console.log("Auth State Change has call but no user found")
+                this.setState({
+                    displayArea: <LoginPhase updateState={this.updateLoginState} />
+                })
+            }
+        })
+    }
+
     render() {
         let navBarMenuEnable = this.state.navbarExpand
+        let displayAreaMember = this.state.displayArea
+        let loginButtonState = this.state.userName == "" ? "button is-light" : "button is-light is-hidden"
+        let logoutButtonState = this.state.userName == "" ? "button is-light is-hidden" : "button is-light"
         return (
             <div>
                 <Router>
@@ -116,45 +226,16 @@ class App extends Component<any, any> {
                             <div className="navbar-end">
                                 <div className="navbar-item">
                                     <div className="buttons kanit">
-                                        <Link to="" className="button is-primary">
-                                            <strong>สมัครใช้งาน</strong>
-                                        </Link>
-                                        <Link to="" className="button is-light">ล็อกอิน</Link>
+                                        <span className="kanitlight"> {this.state.userName}  </span>
+                                        <Link to="" className={loginButtonState}>ล็อกอิน</Link>
+                                        <Link to="" onClick={this.logoutHandle} className={logoutButtonState}>ออกจากระบบ</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </nav>
 
-                    <Switch>
-                        <Route path="/hypertension">
-                            <Hypertension />
-                        </Route>
-                        <Route path="/diabetes">
-                            <Diabetes />
-                        </Route>
-                        <Route path="/weight">
-                            <Weight />
-                        </Route>
-                        <Route path="/spo2">
-                            <Vitalsign value="spo2" />
-                        </Route>
-                        <Route path="/blood-pressure">
-                            <Vitalsign value="blood_pressure" />
-                        </Route>
-                        <Route path="/glucose">
-                            <Vitalsign value="glucose" />
-                        </Route>
-                        <Route path="/heartrate">
-                            <Vitalsign value="heart_rate" />
-                        </Route>
-                        <Route path="/edit-range">
-                            <EditRange />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
+                    {displayAreaMember}
                 </Router>
             </div>
         )
