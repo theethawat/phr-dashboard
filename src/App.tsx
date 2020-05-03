@@ -10,6 +10,7 @@ import Diabetes from "./disease/Diabetes"
 import Vitalsign from "./vitalsign/Vitalsign"
 import EditRange from "./vitalsign/EditRange"
 import LoginPhase from "./Authen/LoginPhase"
+import Frontpage from "./dash/FrontPage"
 let auth = Firebase.auth()
 
 /** Nav bar expand use for expand bulma navigation
@@ -239,14 +240,14 @@ class App extends Component<any, any> {
                 </Router>
                 <div >
                     <hr />
-                    <p className="kanitlight acenter"> Made with love from Centre for Network Research  Computer Engineering,Prince of Songkla University </p> <br />
+                    <p className="kanitlight acenter"> Made with love from Centre for Network Research  Computer Engineering, Prince of Songkla University </p> <br />
                 </div>
             </div>
         )
     }
 }
 function Home() {
-    return <h2>Home</h2>
+    return <Frontpage/>
 }
 
 export default App
