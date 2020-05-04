@@ -83,18 +83,18 @@ class OverallStat extends Component<any, any> {
                     <h5 className="subtitle is-5">จำนวนผู้ใช้งานในระบบ {userStat.size} คน </h5>
                     <div className="columns">
                         <div className="column">
-                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นเบาหวาน {userStat.diabetes}คน</h5>
+                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นเบาหวาน {userStat.diabetes} คน</h5>
                         </div>
 
                         <div className="column">
-                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นโรคไต {userStat.kidney}คน</h5>
+                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นโรคไต {userStat.kidney} คน</h5>
                         </div>
 
                         <div className="column">
-                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นโรคหลอดเลือดหัวใจ {userStat.coronary}คน</h5>
+                            <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นโรคหลอดเลือดหัวใจ {userStat.coronary} คน</h5>
                         </div>
                     </div>
-                    <p>หมายเหตุ นับเฉพาะผู้ใช้งานในแอพพลิเคชั่นระบบใหม่เท่านั้น</p>
+                    <p><b>หมายเหตุ</b> นับเฉพาะผู้ใช้งานในแอพพลิเคชั่นระบบใหม่เท่านั้น</p>
 
                 </div>
             </div>
