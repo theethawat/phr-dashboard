@@ -28,4 +28,5 @@ export default interface IGlucose {
   timeOffset: number
   type: string
   unit: string
+  value: number
 }
