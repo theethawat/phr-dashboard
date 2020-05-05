@@ -29,10 +29,10 @@ class Weight extends Component<any, any> {
     renderNewData(event: any) {
         let target = event.target
         let tempAdvice: IWeightAdvice = {
-            advice_a: target.name == "low" ? target.value : (this.state.advice as IWeightAdvice).advice_a,
-            advice_b: target.name == "normal" ? target.value : (this.state.advice as IWeightAdvice).advice_b,
-            advice_c: target.name == "fat" ? target.value : (this.state.advice as IWeightAdvice).advice_c,
-            advice_d: target.name == "obesity" ? target.value : (this.state.advice as IWeightAdvice).advice_d
+            advice_a: target.name === "low" ? target.value : (this.state.advice as IWeightAdvice).advice_a,
+            advice_b: target.name === "normal" ? target.value : (this.state.advice as IWeightAdvice).advice_b,
+            advice_c: target.name === "fat" ? target.value : (this.state.advice as IWeightAdvice).advice_c,
+            advice_d: target.name === "obesity" ? target.value : (this.state.advice as IWeightAdvice).advice_d
         }
         this.setState({
             advice: tempAdvice

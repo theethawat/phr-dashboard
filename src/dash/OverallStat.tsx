@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Firebase from "../Firebase"
 import UserFormat from "../Authen/IUserField"
 import IStatUser from "./IOverallStat"
+import IUserField from "../Authen/IUserField";
 let firestore = Firebase.firestore()
 class OverallStat extends Component<any, any> {
     constructor(props: any) {
@@ -15,7 +16,8 @@ class OverallStat extends Component<any, any> {
         }
         this.state = {
             userData: overallUserData,
-            totalStat: tempAllStatUser
+            totalStat: tempAllStatUser,
+            allUserCount: 0
         }
     }
 
@@ -36,6 +38,11 @@ class OverallStat extends Component<any, any> {
                     return
                 }
 
+                // Update All User Number
+                this.setState({
+                    allUserCount: snapshot.size as number
+                })
+
                 snapshot.forEach(doc => {
                     // Analyzing User Data For Get Amount of People Medical History
                     let userArticle = doc.data() as UserFormat
@@ -44,11 +51,11 @@ class OverallStat extends Component<any, any> {
                     if (userArticle.inputProgramUser != null) {
                         tempUserData.push(userArticle)
                         size++
-                        if (userArticle.kidney == true)
+                        if (userArticle.kidney === true)
                             kidneyAmount++
-                        if (userArticle.coronary == true)
+                        if (userArticle.coronary === true)
                             coronaryAmount++
-                        if (userArticle.diabetes == true)
+                        if (userArticle.diabetes === true)
                             diabetesAmount++
                     }
 
@@ -80,7 +87,7 @@ class OverallStat extends Component<any, any> {
             <h4 className="subtitle is-4">Overall Statistic</h4>
             <div className="card">
                 <div className="card-content">
-                    <h5 className="subtitle is-5">จำนวนผู้ใช้งานในระบบ {userStat.size} คน </h5>
+                    <h5 className="subtitle is-5">จำนวนผู้ใช้งานในระบบใหม่ {userStat.size} คน / ข้อมูลผู้ใช้งานทั้งหมด {this.state.allUserCount} คน </h5>
                     <div className="columns">
                         <div className="column">
                             <h5 className="subtitle is-6">ผู้มีประวัติป่วยเป็นเบาหวาน {userStat.diabetes} คน</h5>

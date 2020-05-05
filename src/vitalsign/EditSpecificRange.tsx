@@ -43,19 +43,19 @@ class EditSpecificRange extends Component<any, any> {
     renderNewData(event: any) {
         let target = event.target
         let stateRange = this.state.vitalSignRange as IVitalSignRange
-        // advice_safe: (target.name == "advice_safe" ? target.value : (this.state.advice as IVitalSign).advice_safe),
+        // advice_safe: (target.name === "advice_safe" ? target.value : (this.state.advice as IVitalSign).advice_safe),
         let newRenderRange: IVitalSignRange = {
             danger: {
-                max: (target.name == "danger-max" ? target.value : (stateRange.danger.max)),
-                min: (target.name == "danger-min" ? target.value : (stateRange.danger.min))
+                max: (target.name === "danger-max" ? target.value : (stateRange.danger.max)),
+                min: (target.name === "danger-min" ? target.value : (stateRange.danger.min))
             },
             risk: {
-                max: (target.name == "risk-max" ? target.value : (stateRange.risk.max)),
-                min: (target.name == "risk-min" ? target.value : (stateRange.risk.min))
+                max: (target.name === "risk-max" ? target.value : (stateRange.risk.max)),
+                min: (target.name === "risk-min" ? target.value : (stateRange.risk.min))
             },
             safe: {
-                max: (target.name == "safe-max" ? target.value : (stateRange.safe.max)),
-                min: (target.name == "safe-min" ? target.value : (stateRange.safe.min))
+                max: (target.name === "safe-max" ? target.value : (stateRange.safe.max)),
+                min: (target.name === "safe-min" ? target.value : (stateRange.safe.min))
             }
         }
         this.setState({

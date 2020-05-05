@@ -31,7 +31,7 @@ class App extends Component<any, any> {
 
     toggleNavbar() {
         let navbarState = this.state.navbarExpand
-        if (navbarState == true) {
+        if (navbarState === true) {
             this.setState({
                 navbarExpand: false
             })
@@ -144,8 +144,8 @@ class App extends Component<any, any> {
     render() {
         let navBarMenuEnable = this.state.navbarExpand
         let displayAreaMember = this.state.displayArea
-        let loginButtonState = this.state.userName == "" ? "button is-light" : "button is-light is-hidden"
-        let logoutButtonState = this.state.userName == "" ? "button is-light is-hidden" : "button is-light"
+        let loginButtonState = this.state.userName === "" ? "button is-light" : "button is-light is-hidden"
+        let logoutButtonState = this.state.userName === "" ? "button is-light is-hidden" : "button is-light"
         return (
             <div>
                 <Router>
@@ -247,7 +247,7 @@ class App extends Component<any, any> {
     }
 }
 function Home() {
-    return <Frontpage/>
+    return <Frontpage />
 }
 
 export default App

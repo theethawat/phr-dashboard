@@ -34,14 +34,14 @@ class Hypertension extends Component<any, any> {
     renderNewData(event: any) {
         let target = event.target
         let tempAdvice: IHypertension = {
-            advice_a: (target.name == "optimal" ? target.value : (this.state.advice as IHypertension).advice_a),
-            advice_b: (target.name == "normal" ? target.value : (this.state.advice as IHypertension).advice_b),
-            advice_c: (target.name == "high-normal" ? target.value : (this.state.advice as IHypertension).advice_c),
-            advice_d: (target.name == "ht1" ? target.value : (this.state.advice as IHypertension).advice_d),
-            advice_e: (target.name == "ht2" ? target.value : (this.state.advice as IHypertension).advice_e),
-            advice_f: (target.name == "ht3" ? target.value : (this.state.advice as IHypertension).advice_f),
+            advice_a: (target.name === "optimal" ? target.value : (this.state.advice as IHypertension).advice_a),
+            advice_b: (target.name === "normal" ? target.value : (this.state.advice as IHypertension).advice_b),
+            advice_c: (target.name === "high-normal" ? target.value : (this.state.advice as IHypertension).advice_c),
+            advice_d: (target.name === "ht1" ? target.value : (this.state.advice as IHypertension).advice_d),
+            advice_e: (target.name === "ht2" ? target.value : (this.state.advice as IHypertension).advice_e),
+            advice_f: (target.name === "ht3" ? target.value : (this.state.advice as IHypertension).advice_f),
             advice_g: (this.state.advice as IHypertension).advice_g,
-            advice_no: (target.name == "tba" ? target.value : (this.state.advice as IHypertension).advice_no),
+            advice_no: (target.name === "tba" ? target.value : (this.state.advice as IHypertension).advice_no),
             description: (this.state.advice as IHypertension).description
         }
         this.setState({

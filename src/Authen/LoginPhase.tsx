@@ -23,8 +23,8 @@ class LoginPhase extends Component<any, any>{
         let target = event.target
         let identiferState = this.state.identifier as IUserIdentifier
         let newIdentifier: IUserIdentifier = {
-            username: (target.name == "email" ? target.value : identiferState.username),
-            password: (target.name == "password" ? target.value : identiferState.password)
+            username: (target.name === "email" ? target.value : identiferState.username),
+            password: (target.name === "password" ? target.value : identiferState.password)
         }
         this.setState({
             identifier: newIdentifier
@@ -44,7 +44,7 @@ class LoginPhase extends Component<any, any>{
                     }
                     snapshot.forEach(doc=>{
                         let data = doc.data() as IUserField
-                        if(data.adminStatus == true){
+                        if(data.adminStatus === true){
                              window.alert("Login Success Welcome " + ret.user?.email) 
                              // Return to Frontpage to Update Project State
                              this.props.updateState(ret.user?.email)

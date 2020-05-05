@@ -32,16 +32,16 @@ class Diabetes extends Component<any, any>{
     renderNewData(event: any) {
         let target = event.target
         let tempAdvice: IDiabetes = {
-            advice_a: (target.name == "advice_a" ? target.value : (this.state.advice as IDiabetes).advice_a),
-            advice_b: (target.name == "advice_b" ? target.value : (this.state.advice as IDiabetes).advice_b),
-            advice_c: (target.name == "advice_c" ? target.value : (this.state.advice as IDiabetes).advice_c),
-            advice_d: (target.name == "advice_d" ? target.value : (this.state.advice as IDiabetes).advice_d),
-            advice_e: (target.name == "advice_e" ? target.value : (this.state.advice as IDiabetes).advice_e),
-            advice_f: (target.name == "advice_f" ? target.value : (this.state.advice as IDiabetes).advice_f),
-            advice_g: (target.name == "advice_g" ? target.value : (this.state.advice as IDiabetes).advice_g),
-            advice_h: (target.name == "advice_h" ? target.value : (this.state.advice as IDiabetes).advice_h),
-            advice_i: (target.name == "advice_i" ? target.value : (this.state.advice as IDiabetes).advice_i),
-            advice_j: (target.name == "advice_j" ? target.value : (this.state.advice as IDiabetes).advice_j),
+            advice_a: (target.name === "advice_a" ? target.value : (this.state.advice as IDiabetes).advice_a),
+            advice_b: (target.name === "advice_b" ? target.value : (this.state.advice as IDiabetes).advice_b),
+            advice_c: (target.name === "advice_c" ? target.value : (this.state.advice as IDiabetes).advice_c),
+            advice_d: (target.name === "advice_d" ? target.value : (this.state.advice as IDiabetes).advice_d),
+            advice_e: (target.name === "advice_e" ? target.value : (this.state.advice as IDiabetes).advice_e),
+            advice_f: (target.name === "advice_f" ? target.value : (this.state.advice as IDiabetes).advice_f),
+            advice_g: (target.name === "advice_g" ? target.value : (this.state.advice as IDiabetes).advice_g),
+            advice_h: (target.name === "advice_h" ? target.value : (this.state.advice as IDiabetes).advice_h),
+            advice_i: (target.name === "advice_i" ? target.value : (this.state.advice as IDiabetes).advice_i),
+            advice_j: (target.name === "advice_j" ? target.value : (this.state.advice as IDiabetes).advice_j),
             description: (this.state.advice as IDiabetes).description
         }
         this.setState({

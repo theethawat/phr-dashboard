@@ -50,11 +50,11 @@ class Vitalsign extends Component<any, any> {
 
     renderNewData(event: any) {
         let target = event.target
-        // advice_a: (target.name == "advice_a" ? target.value : (this.state.advice as IDiabetes).advice_a),
+        // advice_a: (target.name === "advice_a" ? target.value : (this.state.advice as IDiabetes).advice_a),
         let tempAdvice: IVitalSign = {
-            advice_safe: (target.name == "advice_safe" ? target.value : (this.state.advice as IVitalSign).advice_safe),
-            advice_risk: (target.name == "advice_risk" ? target.value : (this.state.advice as IVitalSign).advice_risk),
-            advice_danger: (target.name == "advice_danger" ? target.value : (this.state.advice as IVitalSign).advice_danger),
+            advice_safe: (target.name === "advice_safe" ? target.value : (this.state.advice as IVitalSign).advice_safe),
+            advice_risk: (target.name === "advice_risk" ? target.value : (this.state.advice as IVitalSign).advice_risk),
+            advice_danger: (target.name === "advice_danger" ? target.value : (this.state.advice as IVitalSign).advice_danger),
             average_value: (this.state.advice as IVitalSign).average_value,
             density: (this.state.advice as IVitalSign).density,
             disease: (this.state.advice as IVitalSign).disease
