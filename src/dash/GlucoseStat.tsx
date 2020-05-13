@@ -70,7 +70,6 @@ class GlucoseStat extends Component<any, any>{
                 <progress className="progress is-danger" value={this.state.dangerZone as number} max={stateGlucose.length} />
 
 
-                <p>หมายเหตุ ใช้เกณฑ์อย่างง่ายในการวิเคราะห์</p>
             </div>
         </div>)
     }

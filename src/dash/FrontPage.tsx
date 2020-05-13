@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import OverallStat from "./OverallStat"
 import GlucoseStat from "./GlucoseStat"
+import PressureStat from "./PressureStat"
+import Spo2Stat from "./Spo2Stat"
+import PulseStat from "./PulseStat"
 class Frontpage extends Component<any, any>{
     render() {
         return (<div className="container">
@@ -10,13 +13,15 @@ class Frontpage extends Component<any, any>{
             <h4 className="subtitle is-4">Datatype Specific Statistic</h4>
             <div className="columns">
                 <div className="column">
+                    <PressureStat />
+                </div>
+                <div className="column">
                     <GlucoseStat />
+                    <br />
+                    <Spo2Stat />
                 </div>
                 <div className="column">
-
-                </div>
-                <div className="column">
-
+                    <PulseStat />
                 </div>
             </div>
         </div>)
