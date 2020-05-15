@@ -91,13 +91,13 @@ class PulseStat extends Component<any, any> {
                     <progress className="progress is-warning" value={risk} max={amount} />
 
                     <label className="label">
-                        เกณฑ์อันตราย {danger}รายการ
+                        เกณฑ์อันตราย {danger} รายการ
                 ({this.percentCalculate(danger, amount).toFixed(2)} % ) </label>
 
                     <progress className="progress is-danger" value={danger} max={amount} />
 
                     <label className="label">
-                        อื่น ๆ {other}รายการ
+                        อื่น ๆ {other} รายการ
                 ({this.percentCalculate(other, amount).toFixed(2)} % ) </label>
 
                     <progress className="progress is-info" value={other} max={amount} />

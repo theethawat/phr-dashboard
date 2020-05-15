@@ -24,6 +24,7 @@ class Frontpage extends Component<any, any>{
                     <PulseStat />
                 </div>
             </div>
+            <p> <b>หมายเหตุ</b> ผลการวิเคราะห์นี้ ใช้เกณฑ์โดยคร่าว ๆ เท่านั้น </p>
         </div>)
     }
 }

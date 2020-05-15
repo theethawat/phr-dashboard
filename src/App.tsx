@@ -186,7 +186,7 @@ class App extends Component<any, any> {
                                 <Link to="/edit-range" className="navbar-item">แก้เกณฑ์การวิเคราะห์</Link>
 
                                 <div className="navbar-item has-dropdown is-hoverable">
-                                    <Link to="" className="navbar-link">คำแนะนำสัญญาณชีพ</Link>
+                                    <Link to="" className="navbar-link">แก้ไขคำแนะนำ</Link>
 
                                     <div className="navbar-dropdown">
                                         <Link to="/spo2" className="navbar-item">
@@ -204,21 +204,20 @@ class App extends Component<any, any> {
                                         <hr className="navbar-divider" />
                                         <Link to="/weight" className="navbar-item">
                                             ภาวะน้ำหนักตัว
-                    </Link>
-                                    </div>
-                                </div>
-                                <div className="navbar-item has-dropdown is-hoverable">
-                                    <Link to="" className="navbar-link">คำแนะนำโรค</Link>
+                                        </Link>
 
-                                    <div className="navbar-dropdown">
+                                        <hr className="navbar-divider" />
+
                                         <Link to="/hypertension" className="navbar-item">
                                             โรคความดันโลหิตสูง
-                    </Link>
+                                        </Link>
+
                                         <Link to="/diabetes" className="navbar-item">
                                             โรคเบาหวาน
-                    </Link>
+                                        </Link>
                                     </div>
                                 </div>
+
                                 <Link to="/" className="navbar-item">
                                     จำลองข้อมูล
                 </Link>
