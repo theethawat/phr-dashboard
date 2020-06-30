@@ -10,3 +10,6 @@
 .acenter {
   text-align: center;
 }
+.vitalsign-stat-columns {
+  overflow-x: scroll;
+}
